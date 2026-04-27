@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import MagicMock, patch
-from inventory.main import format_product
+from main import format_product
 
 def test_format_product():
     mock_product = MagicMock()
