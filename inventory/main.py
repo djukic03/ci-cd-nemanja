@@ -33,6 +33,10 @@ def format_product(pk: str):
         'price': product.price,
         'quantity': product.quantity
     }
+    
+@app.get('/')
+async def root():
+    return {"status": "OK"}
 
 @app.get('/products', response_model=List[dict])
 async def all_products():
