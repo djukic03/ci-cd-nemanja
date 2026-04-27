@@ -9,7 +9,7 @@ def test_format_product():
     mock_product.price = 500.0
     mock_product.quantity = 200
     
-    with patch('inventory.main.Product.get') as mocked_get:
+    with patch('main.Product.get') as mocked_get:
         mocked_get.return_value = mock_product
         result = format_product("test-id-123")
         assert result == {'id': 'test-id-123', 'name': 'Leskovacki cevap kod komse', 'price': 500.0, 'quantity': 200}
